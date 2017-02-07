@@ -5,14 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-group :development, :test do
-  gem 'rspec-rails', '2.13.1'
-end
 
-group :test do
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
-end
+gem 'rspec-rails', '~> 3.5'
+
+gem 'selenium-webdriver'
+gem 'capybara', '2.12.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -55,8 +52,8 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
-  gem 'rails_12factor', '0.0.2'
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
