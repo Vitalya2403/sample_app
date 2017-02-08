@@ -35,6 +35,8 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL, :type => :request
 
+  config.include ApplicationHelper
+
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
